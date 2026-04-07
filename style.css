@@ -1,0 +1,133 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f0f;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 1.5rem;
+  color: #e8e8e8;
+}
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 1rem;
+  padding: 2rem 2rem 1.5rem;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+h1 .sub {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.5;
+}
+.hint code, .explainer code {
+  background: #2a2a2a;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="url"], input[type="text"] {
+  flex: 1;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  color: #e8e8e8;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.8rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input[type="url"]:focus, input[type="text"]:focus {
+  border-color: #ff4444;
+}
+input[readonly] {
+  color: #aaa;
+  cursor: text;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s, transform 0.1s;
+}
+button:active { transform: scale(0.97); }
+
+#goBtn {
+  background: #ff2020;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  white-space: nowrap;
+}
+#goBtn:hover { background: #e01010; }
+#goBtn:disabled { background: #555; cursor: not-allowed; transform: none; }
+
+.result { display: flex; flex-direction: column; gap: 0.4rem; }
+.result label { font-size: 0.8rem; color: #888; }
+
+.feed-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#copyBtn {
+  background: #2a2a2a;
+  color: #e8e8e8;
+  border: 1px solid #444;
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+#copyBtn:hover { background: #333; }
+#copyBtn.copied { background: #1a3d2b; border-color: #2a7a4a; color: #5dbb7f; }
+
+.error {
+  background: #2a1010;
+  border: 1px solid #6b1f1f;
+  border-radius: 0.5rem;
+  color: #f88;
+  font-size: 0.85rem;
+  padding: 0.7rem 0.9rem;
+  line-height: 1.5;
+}
+
+.explainer {
+  font-size: 0.78rem;
+  color: #555;
+  line-height: 1.6;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 1rem;
+}
+
+.hidden { display: none !important; }
